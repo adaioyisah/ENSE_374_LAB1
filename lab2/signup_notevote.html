@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Note-Vote</h1>
+        
+        <!-- Login Dropdown (Collapsed) -->
+        <div class="dropdown">
+            <div class="dropdown-header">
+                Log In <span class="arrow">&#9650;</span> <!-- Down Arrow -->
+            </div>
+            <div class="dropdown-content collapsed">
+                <form id="loginForm">
+                    <label for="loginEmail">Email address</label>
+                    <input type="email" id="loginEmail" name="loginEmail" placeholder="Email address" required>
+
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" required>
+
+                    <button type="submit">Log In</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Register Dropdown (Expanded) -->
+        <div class="dropdown active">
+            <div class="dropdown-header">
+                Register <span class="arrow">&#9660;</span> <!-- Up Arrow -->
+            </div>
+            <div class="dropdown-content">
+                <form id="registerForm">
+                    <label for="registerEmail">Email address</label>
+                    <input type="email" id="registerEmail" name="registerEmail" placeholder="Email address" required>
+
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="registerPassword" placeholder="Password" required>
+
+                    <label for="inviteCode">Invite Code</label>
+                    <input type="text" id="inviteCode" name="inviteCode" placeholder="Invite Code" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

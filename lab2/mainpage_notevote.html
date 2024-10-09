@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Note-Vote</h1>
+
+        <!-- Logged In Section -->
+        <div class="dropdown active">
+            <div class="dropdown-header">
+                <span class="user-info">&#9881; Logged in as a@a.a</span> <!-- User info with settings icon -->
+                <span class="arrow">&#9650;</span> <!-- Up Arrow -->
+            </div>
+            <div class="dropdown-content">
+                <button class="logout-btn">Log Out</button>
+            </div>
+        </div>
+
+        <!-- Notes and Voting Section -->
+        <div class="notes-section">
+            <div class="note">
+                <span>this is a note you upvoted</span>
+                <div class="voting">
+                    <button class="upvote active">⬆️</button>
+                    <button class="downvote">⬇️</button>
+                    <span class="score">1</span>
+                </div>
+            </div>
+
+            <div class="note">
+                <span>this is a note you downvoted</span>
+                <div class="voting">
+                    <button class="upvote">⬆️</button>
+                    <button class="downvote active">⬇️</button>
+                    <span class="score">-1</span>
+                </div>
+            </div>
+
+            <div class="note">
+                <span>this is a note you haven't voted on yet</span>
+                <div class="voting">
+                    <button class="upvote">⬆️</button>
+                    <button class="downvote">⬇️</button>
+                    <span class="score">0</span>
+                </div>
+            </div>
+
+            <div class="note">
+                <span>this is a note you submitted</span>
+                <div class="voting">
+                    <button class="upvote disabled">⬆️</button>
+                    <button class="downvote disabled">⬇️</button>
+                    <span class="score">0</span>
+                </div>
+            </div>
+
+            <!-- Add a new note section -->
+            <div class="add-note">
+                <input type="text" placeholder="Enter a new note here">
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

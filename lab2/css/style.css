@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown Sections for Login and Register */
+.dropdown {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.dropdown-header {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e0e0ff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content {
+    padding: 15px;
+}
+
+.dropdown .collapsed {
+    display: none;
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+/* Forms for Login and Register */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Always visible login and signup buttons */
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Always visible */
+}
+
+
+/* Styling for the Logged-in User Section */
+.logout-btn {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+}
+
+.user-info {
+    font-size: 14px;
+}
+
+/* Notes and Voting Section */
+.notes-section {
+    margin-top: 20px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.voting {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.upvote, .downvote {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.upvote.active {
+    background-color: green;
+    color: white;
+}
+
+.downvote.active {
+    background-color: red;
+    color: white;
+}
+
+.upvote.disabled, .downvote.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.score {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+/* Add New Note Section */
+.add-note {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.add-note input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-btn {
+    width: 25%;
+    padding: 5px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+}
