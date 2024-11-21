@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Dropdown styles */
+.dropdown {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    height: 100px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dropdown-header {
+    font-size: 14px;
+    background-color: #e8f0ff;
+    border-radius: 8px 8px 0 0;
+}
+
+.logout-btn {
+    width: 25%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+}
+
+/* Notes section styles */
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.voting {
+    display: flex;
+    align-items: center;
+}
+
+.upvote, .downvote {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.upvote.active {
+    color: green;
+}
+
+.downvote.active {
+    color: red;
+}
+
+.score {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Add note section */
+.add-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.add-note input {
+    flex-grow: 1;
+}
+
+.add-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}

@@ -1,0 +1,34 @@
+{
+    "Note-Vote-Login": [
+      {
+        "email": "a@a.a",
+        "password": "aPassword"
+      },
+      {
+        "email": "b@b.b",
+        "password": "bPassword"
+      },
+      {
+        "email": "c@c.c",
+        "password": "cPassword"
+      }
+    ],
+    "Note-Vote-Signup": [
+      {
+        "email": "a@a.a",
+        "password": "aPassword",
+        "invite-code": "INVITE123"
+      },
+      {
+        "email": "b@b.b",
+        "password": "bPassword",
+        "invite-code": "INVITE456"
+      },
+      {
+        "email": "c@c.c",
+        "password": "cPassword",
+        "invite-code": "INVITE789"
+      }
+    ]
+  }
+  

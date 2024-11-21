@@ -1,0 +1,20 @@
+{
+    "firstName": "Adam",
+    "lastName": "Tilson",
+    "address": {
+      "streetAddress": "123 Fake St.",
+      "city": "Springfield"
+    },
+    "phoneNumbers": [
+      {
+        "type": "home",
+        "number": "123 456-7890"
+      },
+      {
+        "type": "work",
+        "number": "789 456-1230"
+      }
+    ],
+    "children": [],
+    "spouse": null
+  }

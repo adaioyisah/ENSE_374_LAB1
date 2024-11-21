@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+/* General Styling */
+/* Main Page Container */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.note-vote-page {
+    max-width: 40%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+}
+
+/* Accordion Styling */
+.user-info {
+    font-size: 16px;
+}
+
+.logout-btn {
+    width: 70px; /* Fixed width */
+    padding: 0.5rem;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.accordion-body {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center;
+}
+
+
+/* Notes Section */
+.notes-section {
+    margin-top: 20px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Voting Section */
+.voting {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.voting button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upvote.active {
+    background-color: green;
+    color: white;
+}
+
+.downvote.active {
+    background-color: red;
+    color: white;
+}
+
+.upvote.disabled, .downvote.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Score Styling */
+.score {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* Add Note Section */
+.add-note input {
+    flex-grow: 1;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+}
+
+.add-note button {
+    width: 80px;
+    border-radius: 0 4px 4px 0;
+    padding: 0.5rem;
+}

@@ -1,118 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 /* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-
-.container {
-    width: 300px;
+/* Main Page Container */
+.note-vote-page {
+    max-width: 40%;
+    background-color: #f8f9fa;
     padding: 20px;
-    background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Override .container when .votepage is also present */
-.container .votepage {
-    width: 700px;
-}
-
-
+/* Header Styling */
 h1 {
-    text-align: center;
+    font-family: 'Merriweather', serif;
     font-size: 24px;
-    margin-bottom: 20px;
 }
 
-/* Dropdown Sections for Login and Register */
-.dropdown {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    font-size: 10px;
-}
-
-.dropdown-header {
-    padding: 10px;
+/* Accordion Styling */
+.user-info {
     font-size: 16px;
-    background-color: #e0e0ff;
-    border-bottom: 1px solid #ccc;
+}
+
+.logout-btn {
+    width: 70px; /* Fixed width */
+    padding: 0.5rem;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.accordion-body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centers the button horizontally */
     align-items: center;
 }
 
 
-.dropdown-content {
-    padding: 15px;
-}
-
-.dropdown .collapsed {
-    display: none;
-}
-
-.arrow {
-    font-size: 18px;
-}
-
-/* Forms for Login and Register */
-input[type="email"],
-input[type="password"],
-input[type="text"] {
-    width: 90%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 10;
-    text-align: center;
-}
-
-/* Always visible login and signup buttons */
-
-button {
-    width: 30%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block; /* Always visible */
-    margin: 0 auto;
-}
-
-
-/* Styling for the Logged-in User Section */
-.logout-btn {
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.logout-btn:hover {
-    background-color: #0056b3;
-}
-
-.user-info {
-    font-size: 14px;
-}
-
-/* Notes and Voting Section */
+/* Notes Section */
 .notes-section {
     margin-top: 20px;
 }
@@ -122,39 +50,29 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid #ccc;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
     border-radius: 4px;
     margin-bottom: 10px;
-    background-color: #f9f9f9;
-    width: auto;   /* Allow the width to grow as needed */
-    white-space: normal;  /* Allow text to wrap if it’s too long */
 }
 
-.note span {
-    white-space: normal; /* Allow the text to break onto the next line if needed */
-    display: block;      /* Display as a block to allow wrapping */
-    width: auto;         /* Let the width adjust automatically based on the content */
-}
+/* Voting Section */
 .voting {
     display: flex;
     align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    width: 30%;
+    justify-content: flex-end;
 }
 
-button {
-    
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    align-items: centre;
-}
-
-.upvote, .downvote {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin: 0 5px;
-    cursor: pointer;
-    margin: 9px 10px;
+.voting button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .upvote.active {
@@ -172,45 +90,30 @@ button {
     cursor: not-allowed;
 }
 
+/* Score Styling */
 .score {
-  margin-left: 5px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 9px 10px;
-  width: 40px;   /* Set width to 300 pixels */
-  height:30px;  /* Set height to 200 pixels */
-  align-items: center;
-  text-align: center;
-  padding: 5px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    text-align: center;
 }
 
-/* Add New Note Section */
-.add-note {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
+/* Add Note Section */
 .add-note input {
-    width: 70%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    flex-grow: 1;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
 }
 
-.add-btn {
-    width: 25%;
-    padding: 5px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.add-btn:hover {
-    background-color: #0056b3;
+.add-note button {
+    width: 80px;
+    border-radius: 0 4px 4px 0;
+    padding: 0.5rem;
 }

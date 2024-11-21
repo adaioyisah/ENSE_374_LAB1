@@ -1,0 +1,27 @@
+<!-- post.ejs -->
+<div class="post">
+    <h3><%= post.text %></h3>
+    <p>Created by: <%= post.creator.username %></p>
+
+    <% if (post.creator.username === username) { %>
+        <p>Your Post</p>
+        <button class="btn btn-secondary upvote" disabled>⬆️</button>
+        <button class="btn btn-secondary downvote" disabled>⬇️</button>
+    <% } else { %>
+        <form action="/vote" method="POST">
+            <input type="hidden" name="postId" value="<%= post._id %>">
+            <input type="hidden" name="username" value="<%= username %>">
+            <input type="hidden" name="voteType" value="upvote">
+            <button class="btn <%= post.upvotes.find(u => u.username === username) ? 'btn-success' : 'btn-secondary' %> upvote">⬆️</button>
+        </form>
+
+        <form action="/vote" method="POST">
+            <input type="hidden" name="postId" value="<%= post._id %>">
+            <input type="hidden" name="username" value="<%= username %>">
+            <input type="hidden" name="voteType" value="downvote">
+            <button class="btn <%= post.downvotes.find(u => u.username === username) ? 'btn-danger' : 'btn-secondary' %> downvote">⬇️</button>
+        </form>
+    <% } %>
+
+    <p>Upvotes: <%= post.upvotes.length %>, Downvotes: <%= post.downvotes.length %></p>
+</div>

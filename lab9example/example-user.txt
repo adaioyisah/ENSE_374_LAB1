@@ -1,0 +1,8 @@
+{
+
+    "username" = "adam",
+    "salt" =      "asdf1234"
+    "password" = "d763ab908ebea6a937785723a514f693"
+
+
+}

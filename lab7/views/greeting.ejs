@@ -1,0 +1,18 @@
+<%- include("layouts/header") -%>
+
+
+    <!-- <h1 class="my-heading">Welcome to my page, <%= username %>! </h1> -->
+
+    <% if (username === "Adam") { %>
+    <h1 class="my-heading">Welcome to my page, <%= username %>!</h1>
+   
+    <p>My favourite fruits are:</p>
+    <%- include("partials/list-module.ejs", { itemList : fruitList }) -%>
+  
+
+    <% } else { %>
+    <h1 class="error-heading"> Sorry, I don't know you </h1>
+    <% } %>
+
+
+<%- include("layouts/footer") -%>

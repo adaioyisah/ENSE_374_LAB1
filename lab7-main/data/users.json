@@ -1,0 +1,12 @@
+{
+    "Note-Vote-Login": [
+        { "email": "adai@a.com", "password": "aAnunaki" },
+        { "email": "yisah@a.com", "password": "yAnunaki" },
+        { "email": "israel@a.com", "password": "iAnunaki" }
+    ],
+    "Note-Vote-Signup": [
+        { "email": "adai@a.com", "password": "aAnunaki", "invite-code": "Bunker1" },
+        { "email": "yisah@a.com", "password": "yAnunaki", "invite-code": "Bunker2" },
+        { "email": "israel@a.com", "password": "iAnunaki", "invite-code": "Bunker3" }
+    ]
+}

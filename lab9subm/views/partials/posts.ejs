@@ -1,0 +1,68 @@
+<!-- posts.ejs --> 
+
+<%- include('../layouts/header') %>
+
+<div class="note-vote-page mx-auto my-5">
+    <div class="container votepage">
+        <h1 class="text-center mb-4">Note-Vote</h1>
+
+        <!-- Logged-In Section -->
+        <div class="accordion mb-4" id="userAccordion">
+            <div class="accordion-item">
+         <h2 class="accordion-header" id="loggedInHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#loggedInCollapse" aria-expanded="true" aria-controls="loggedInCollapse">
+                        <span class="user-info">&#9881; Logged in as <%= username %></span>
+                    </button>
+                </h2>
+                <div id="loggedInCollapse" class="accordion-collapse collapse show" aria-labelledby="loggedInHeading" data-bs-parent="#userAccordion">
+                 <div class="accordion-body">
+                 <div class="logout-container">
+                 <form action="/logout" method="POST">
+                 <button type="submit" class="btn btn-danger logout-btn">Log Out</button>
+                </form>
+                </div>
+                 </div>
+                  </div>
+                 </div>
+        </div>
+
+        <!-- Notes and Voting Section -->
+           <div class="notes-section">
+               <% posts.forEach(post => { %>
+                 <div class="note mb-3 p-3 border rounded">
+                  <p><strong><%= post.creator %></strong>: <%= post.text %></p>
+                    <div class="d-flex align-items-center">
+                        <% if (post.creator === username) { %>
+                            <!-- Disabe voting for user's own posts -->
+                            <button class="btn btn-secondary me-2" disabled>⬆️</button>
+                            <button class="btn btn-secondary me-2" disabled>⬇️</button>
+                        <% } else { %>
+                            <!-- Upvote -->
+                            <form action="/upvote" method="POST" style="display:inline;">
+                            <input type="hidden" name="postId" value="<%= post._id %>">
+                                <button type="submit" class="btn <%= post.upvotes.includes(username) ? 'btn-success' : 'btn-secondary' %> me-2">⬆️</button>
+                            </form>
+                            <!-- Down-vote -->
+                          <form action="/downvote" method="POST" style="display:inline;">
+                                <input type="hidden" name="postId" value="<%= post._id %>">
+                            <button type="submit" class="btn <%= post.downvotes.includes(username) ? 'btn-danger' : 'btn-secondary' %> me-2">⬇️</button>
+                            </form>
+                        <% } %>
+                        <!-- SHOW Score -->
+                        <span class="score">Score: <%= post.upvotes.length - post.downvotes.length %></span>
+                    </div>
+                </div>
+            <% }); %>
+
+            <!-- AdD New Note Section -->
+            <form action="/add-post" method="POST" class="mt-4">
+                <div class="d-flex">
+               <input type="text" name="text" class="form-control" placeholder="Write a note..." required>
+               <button type="submit" class="btn btn-primary ms-2">Add Note</button>
+                </div>
+            </form>
+        </div>
+        </div>
+         </div>
+
+<%- include('../layouts/footer') %>

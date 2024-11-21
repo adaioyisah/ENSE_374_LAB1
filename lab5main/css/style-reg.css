@@ -1,0 +1,47 @@
+/* style.css */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid #2a06ab;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eee5e5;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+}
+
+#loggedInUser {
+    font-weight: bold;
+}
+
+.note {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.note p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.upvote, .downvote {
+    margin-right: 5px;
+}
+
+.score {
+    font-weight: bold;
+}
